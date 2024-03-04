@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Trắc nghiệm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="nav-logo">
+        <div class="img-logo"> <img src="https://code.ptit.edu.vn/2020/images/logo_ptit.png" alt="Logo"></div>
+      </div>
+      <div class="header-title">
+          PTIT FORM
+      </div>
+    </div>
+    <h1>Phiếu khảo sát sinh viên PTIT</h1>
+    <div id="form" class="information">
+      <div class="student-information">
+
+          <label for="student-code">Họ và tên: </label>
+          <input type="text" required>
+          <br>
+
+          <label for="name">Ngày sinh: </label>
+          <input type="date" id="date-form" required>
+
+          <br>
+
+          <label for="class-name">CCCD: </label>
+          <input type="text" required>
+          <br>
+          <label for="dob">Địa chỉ thường trú: </label>
+          <input type="text" required>
+          <br>
+          <button type="submit" id="confirm-btn" onclick="render()">Xác nhận</button>
+
+      </div>
+  </div>
+
+    
+    <div class="container">
+      <div id="cauhoi"></div>
+      <div id="action">
+        <div id="trangthai"></div>
+      </div>
+      <button id="btn-nopbai" onclick="nopbai()">Hoàn thành</button>
+    </div>
+
+
+    
+    <div class="dialog-overlay" id="dialogOverlay"></div>
+
+    <!-- Nội dung của dialog -->
+    <div class="dialog-content" id="dialogContent">
+        <h2 class="sent">Cảm ơn bạn đã tham gia khảo sát</h2>
+        <p class="sent">Câu trả lời của bạn đã được gửi đi.</p>
+        <button id="btn-close" onclick="closeDialog()">Đóng</button>
+    </div>
+
+    
+    <script src="javascript.js"></script>
+  </body>
+</html>
